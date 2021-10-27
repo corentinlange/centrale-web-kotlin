@@ -14,7 +14,7 @@ internal class MockPersonDataSourceTest {
         // given
 
         // when
-        val persons = mockDataSource.getPersons()
+        val persons = mockDataSource.retrievePersons()
 
         // then
         assertThat(persons).isNotEmpty
@@ -25,7 +25,7 @@ internal class MockPersonDataSourceTest {
         // given
 
         // when
-        val persons = mockDataSource.getPersons()
+        val persons = mockDataSource.retrievePersons()
 
         // then
         assertThat(persons).allMatch { it.firstName.isNotBlank() }

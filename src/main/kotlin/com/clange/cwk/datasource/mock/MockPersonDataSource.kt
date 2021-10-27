@@ -10,5 +10,5 @@ class MockPersonDataSource: PersonDataSource {
 
     val persons = listOf(Person("John", "John", 1))
 
-    fun getPersons(): Collection<Person> = persons
+    override fun retrievePersons(): Collection<Person> = persons
 }
