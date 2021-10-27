@@ -8,5 +8,6 @@ import org.springframework.stereotype.Service
 class PersonService (private val personSource: PersonDataSource){
 
     fun getPersons(): Collection<Person> = personSource.retrievePersons()
+    fun getPerson(id: String): Person = personSource.retrievePerson(id)
 
 }

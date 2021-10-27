@@ -8,7 +8,10 @@ import com.clange.cwk.model.Person
 @Repository
 class MockPersonDataSource: PersonDataSource {
 
-    val persons = listOf(Person("John", "John", 1))
+    val persons = listOf(Person("1234","John", "Johnson", 30))
 
     override fun retrievePersons(): Collection<Person> = persons
+
+    override fun retrievePerson(id: String): Person =
+        persons.first { it.id == id }
 }
